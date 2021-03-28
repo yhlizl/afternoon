@@ -30,12 +30,13 @@ var vm = new Vue({
             if(c){
                 console.log(r);
                 let data = {
-                    id: r.id
+                    id: r.id,
+                    store: r.store,
                 };
                 function successFunc(result) {
                     get_order();
                 }
-                Ajax(data,'./close_meal.php',successFunc);
+                Ajax(data,'/control/close',successFunc);
                 
 
             }
@@ -54,7 +55,7 @@ function get_order(){
         vm.today_meal = result['today_meal'];
         console.log(vm.today_meal);
     }
-    Ajax(data,'../main/get_meal.php',successFunc);
+    Ajax(data,'/meal/getmeal',successFunc);
 }
 
 

@@ -37,12 +37,12 @@
                     </thead>
                     <tbody>
                         <tr v-for="r in today_meal"> 
-                            <!---
-                            <td>{store}</td>
-                            <td>{type}</td>
-                            <td>{memo}</td>
-                            <td>{date}</td>
-                            -->
+                           
+                            <td>{r.store}</td>
+                            <td>{r.type}</td>
+                            <td>{r.memo}</td>
+                            <td>{r.date}</td>
+                            
                             <td><i class="material-icons deleteBtn" v-on:click="deleted(r,$event)">delete</i></td>
                         </tr> 
                     </tbody>
