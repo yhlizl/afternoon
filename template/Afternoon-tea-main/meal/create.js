@@ -65,7 +65,7 @@ function insertdb1(event) {
                 dataType: "json",
                 success: function (result) {
                     
-                          //  window.location.href = '/meal/';
+                            window.location.href = '/meal/';
                         }
                     
 
@@ -121,7 +121,7 @@ function insertdb2(event) {
                 dataType: "json",
                 success: function (result) {
                     
-                          //  window.location.href = '/meal/';
+                            window.location.href = '/meal/';
                         }
                     
 
@@ -176,7 +176,7 @@ $('#submit1').on('click', function (event) {
                 success: function (result) {
                     console.log(result);
                     if (result['success']) {
-                       // window.location.href = '/meal/';
+                        window.location.href = '/meal/';
                     }
                     else {
                         var c = confirm(result['status']);
@@ -238,7 +238,7 @@ $('#submit2').on('click', function (event) {
                 success: function (result) {
                     console.log(result);
                     if (result['success']) {
-                       // window.location.href = '/meal/';
+                        window.location.href = '/meal/';
                     }
                     else {
                         var c = confirm(result['status']);
