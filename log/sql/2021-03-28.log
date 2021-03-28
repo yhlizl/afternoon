@@ -121,3 +121,53 @@
 2021-03-28 11:00:24.750 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
 2021-03-28 11:00:26.414 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo from meal_info
 2021-03-28 11:00:26.414 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
+2021-03-28 11:11:45.689 [DEBU] [  1 ms] [MITD] select name from member where number = '092844'
+2021-03-28 11:11:47.199 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo from meal_info
+2021-03-28 11:11:47.199 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
+2021-03-28 11:13:11.168 [DEBU] [  1 ms] [MITD] select name from member where number = '092844'
+2021-03-28 11:13:11.221 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo from meal_info
+2021-03-28 11:13:11.222 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
+2021-03-28 11:13:12.251 [DEBU] [  0 ms] [MITD] select id, image, date, type, memo, status, order_count from meal_info  where store like 'drink'
+2021-03-28 11:13:12.294 [DEBU] [  0 ms] [MITD] select * from member
+2021-03-28 11:13:12.295 [DEBU] [  1 ms] [MITD] select id,store_id,store,type,name,food_name,drink_name,drink_size,drink_ice,drink_sugar,price,memo,date 
+	from order_info where store_id = '9' and store='drink' and type='食物' and date='2021-03-28' order by food_name,drink_name
+2021-03-28 11:13:14.872 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo from meal_info
+2021-03-28 11:13:14.873 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
+2021-03-28 11:13:15.678 [DEBU] [  0 ms] [MITD] select id, image, date, type, memo, status, order_count from meal_info  where store like '13'
+2021-03-28 11:13:15.718 [DEBU] [  0 ms] [MITD] select * from member
+2021-03-28 11:13:15.719 [DEBU] [  0 ms] [MITD] select id,store_id,store,type,name,food_name,drink_name,drink_size,drink_ice,drink_sugar,price,memo,date 
+	from order_info where store_id = '1' and store='13' and type='食物' and date='2021-03-27' order by food_name,drink_name
+2021-03-28 11:13:22.085 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo from meal_info
+2021-03-28 11:13:22.085 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
+2021-03-28 11:13:23.219 [DEBU] [  0 ms] [MITD] select id, image, date, type, memo, status, order_count from meal_info  where store like '111'
+2021-03-28 11:13:23.251 [DEBU] [  1 ms] [MITD] select * from member
+2021-03-28 11:13:23.251 [DEBU] [  0 ms] [MITD] select id,store_id,store,type,name,food_name,drink_name,drink_size,drink_ice,drink_sugar,price,memo,date 
+	from order_info where store_id = '2' and store='111' and type='食物' and date='2021-03-27' order by food_name,drink_name
+2021-03-28 11:14:16.936 [DEBU] [  1 ms] [MITD] select id, store, type, date, memo from meal_info
+2021-03-28 11:14:16.936 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
+2021-03-28 11:14:17.929 [DEBU] [  0 ms] [MITD] select id, image, date, type, memo, status, order_count from meal_info  where store like '13'
+2021-03-28 11:14:17.965 [DEBU] [  0 ms] [MITD] select * from member
+2021-03-28 11:14:17.965 [DEBU] [  0 ms] [MITD] select id,store_id,store,type,name,food_name,drink_name,drink_size,drink_ice,drink_sugar,price,memo,date 
+	from order_info where store_id = '1' and store='13' and type='食物' and date='2021-03-27' order by food_name,drink_name
+2021-03-28 11:14:20.509 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo from meal_info
+2021-03-28 11:14:20.510 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
+2021-03-28 11:14:21.189 [DEBU] [  1 ms] [MITD] select id, store, type, date, memo from meal_info
+2021-03-28 11:14:21.189 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
+2021-03-28 11:14:22.212 [DEBU] [  1 ms] [MITD] select id, image, date, type, memo, status, order_count from meal_info  where store like '111'
+2021-03-28 11:14:28.055 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo from meal_info
+2021-03-28 11:14:28.056 [DEBU] [  1 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
+2021-03-28 11:14:29.313 [DEBU] [  0 ms] [MITD] select id, image, date, type, memo, status, order_count from meal_info  where store like 'royale28'
+2021-03-28 11:14:30.651 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo from meal_info
+2021-03-28 11:14:30.651 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
+2021-03-28 11:14:31.675 [DEBU] [  0 ms] [MITD] select id, image, date, type, memo, status, order_count from meal_info  where store like 'drink'
+2021-03-28 11:14:31.726 [DEBU] [  0 ms] [MITD] select * from member
+2021-03-28 11:14:31.727 [DEBU] [  1 ms] [MITD] select id,store_id,store,type,name,food_name,drink_name,drink_size,drink_ice,drink_sugar,price,memo,date 
+	from order_info where store_id = '9' and store='drink' and type='食物' and date='2021-03-28' order by food_name,drink_name
+2021-03-28 11:14:33.379 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo from meal_info
+2021-03-28 11:14:33.380 [DEBU] [  1 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 
+2021-03-28 11:14:34.249 [DEBU] [  0 ms] [MITD] select id, image, date, type, memo, status, order_count from meal_info  where store like 'test'
+2021-03-28 11:14:34.285 [DEBU] [  0 ms] [MITD] select * from member
+2021-03-28 11:14:34.285 [DEBU] [  0 ms] [MITD] select id,store_id,store,type,name,food_name,drink_name,drink_size,drink_ice,drink_sugar,price,memo,date 
+	from order_info where store_id = '4' and store='test' and type='食物' and date='2021-03-28' order by food_name,drink_name
+2021-03-28 11:14:35.948 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo from meal_info
+2021-03-28 11:14:35.949 [DEBU] [  0 ms] [MITD] select id, store, type, date, memo, status from meal_info where date='2021-03-28' and status='open' 

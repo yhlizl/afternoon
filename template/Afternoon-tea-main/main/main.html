@@ -28,7 +28,7 @@
       <div class="subtitle titleleft">口袋菜單</div>
       <div class="meal_box" style="width: 100%; height: 100%">
         <!-- <div class="meal_list" v-for="m in rows">${m.store}</div> -->
-        <form class="form" method="get" action="/detail/index" v-for="m in rows">
+        <form class="form" method="get" action="/meal/" v-for="m in rows">
           <input class="meal_list" type="submit" name="submit" v-bind:value="m.store" />
           <input type="hidden" name="id" v-bind:value="m.id">
           <input type="hidden" name="store" v-bind:value="m.store">
