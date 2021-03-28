@@ -87,6 +87,7 @@ var vm_member = new Vue({
 
 var typestring = $("input[name='type']").val();
 var id = $("input[name='id']").val();
+var order_id = $("input[name='order_id']").val();
 var store = $("input[name='store']").val();
 var date = $("input[name='date']").val();
 
@@ -118,11 +119,15 @@ $.ajax({
 // GET ORDER LIST  JS -> PHP
 
 function get_order(){
+    
     $.ajax({
+        
+       
         type: "POST",
         crossDomain: true,
         cache: false,
         data: {
+           
             id: id,
             store: store,
             type: typestring,
@@ -242,11 +247,13 @@ $('#submit').on('click', function (event) {
     //console.log(order_type);
 
     if ((food_name != "" || drink_name != "") && price != "") {
+        console.log(order_id,id,store);
         $.ajax({
             type: "POST",
             crossDomain: true,
             cache: false,
             data: {
+                order_id:order_id,
                 id: id,
                 store: store,
                 type: typestring,

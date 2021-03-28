@@ -127,7 +127,7 @@ func (a *detailApi) Getinit(r *ghttp.Request) {
 
 }
 func (a *detailApi) Register(r *ghttp.Request) {
-
+	r_order_id := r.GetString("order_id")
 	r_id := r.GetString("id")
 	r_store := r.GetString("store")
 	r_type := r.GetString("type")
@@ -152,11 +152,14 @@ func (a *detailApi) Register(r *ghttp.Request) {
 		 	}
 	*/
 	db := g.DB("MITD")
-	sql := `insert into order_info 
-	(store_id,store,type,name,food_name,drink_name,drink_size,drink_ice,drink_sugar,price,memo,date)
-	values('` + r_id + `','` + r_store + `','` + r_type + `','` + r_member + `','` + r_food_name + `','` + r_drink_name + `','` + r_size + `','` + r_ice + `',
+	sql := ""
+	if r_order_id != "" {
+		sql = `insert into order_info 
+	(id,store_id,store,type,name,food_name,drink_name,drink_size,drink_ice,drink_sugar,price,memo,date)
+	values('` + r_order_id + `','` + r_id + `','` + r_store + `','` + r_type + `','` + r_member + `','` + r_food_name + `','` + r_drink_name + `','` + r_size + `','` + r_ice + `',
 	'` + r_sugar + `','` + r_price + `','` + r_memo + `','` + r_date + `')
 	on duplicate key update
+	id='` + r_order_id + `',
 	store_id='` + r_id + `',
 	store='` + r_store + `',
 	type='` + r_type + `',
@@ -170,6 +173,27 @@ func (a *detailApi) Register(r *ghttp.Request) {
 	memo='` + r_memo + `',
 	date='` + r_date + `'
 	`
+	} else {
+		sql = `insert into order_info 
+		(store_id,store,type,name,food_name,drink_name,drink_size,drink_ice,drink_sugar,price,memo,date)
+		values('` + r_id + `','` + r_store + `','` + r_type + `','` + r_member + `','` + r_food_name + `','` + r_drink_name + `','` + r_size + `','` + r_ice + `',
+		'` + r_sugar + `','` + r_price + `','` + r_memo + `','` + r_date + `')
+		on duplicate key update
+		
+		store_id='` + r_id + `',
+		store='` + r_store + `',
+		type='` + r_type + `',
+		name='` + r_member + `',
+		food_name='` + r_food_name + `',
+		drink_name='` + r_food_name + `',
+		drink_size='` + r_size + `',
+		drink_ice='` + r_ice + `',
+		drink_sugar='` + r_sugar + `',
+		price='` + r_price + `',
+		memo='` + r_memo + `',
+		date='` + r_date + `'
+		`
+	}
 	_, _ = db.Exec(sql)
 	//r.Response.RedirectBack()
 	r.Response.WriteJson(g.Map{

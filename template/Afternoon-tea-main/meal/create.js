@@ -100,8 +100,7 @@ function insertdb2(event) {
     var memo = $('#input_memo').val();
     var imagestring = $("input[name='imagestring']").val();
 
-    var r = confirm("確定送出?");
-    if (r) {
+    
 
         if (store != '' && date != '' && type != '' && memo != "" && imagestring != "") {
             $.ajax({
@@ -121,7 +120,7 @@ function insertdb2(event) {
                 dataType: "json",
                 success: function (result) {
                     
-                            window.location.href = '/meal/';
+                            window.location.href = '/';
                         }
                     
 
@@ -142,7 +141,7 @@ function insertdb2(event) {
             console.log(store, memo, date, type, imagestring);
         }
 
-    }
+    
 }
 
 $('#submit1').on('click', function (event) {
@@ -238,17 +237,14 @@ $('#submit2').on('click', function (event) {
                 success: function (result) {
                     console.log(result);
                     if (result['success']) {
-                        window.location.href = '/meal/';
+                        window.location.href = '/';
                     }
                     else {
-                        var c = confirm(result['status']);
-                        if (c) {
+                    
                             console.log(result.data);
                             insertdb2(event);
-                        }
-                        else {
-                            window.location.href = '/meal/';
-                        }
+                            
+                       
                     }
 
                 },

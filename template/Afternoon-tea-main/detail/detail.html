@@ -22,6 +22,7 @@
     <div class="toolbar download" id="download">
       <form method="GET" action="/export/index ">
         <i class="material-icons home" >view_list</i>
+        <input type="hidden" name="order_id" value="${{.order_id}}">
         <input type="hidden" name="id" value="${{.id}}">
         <input type="hidden" name="store" value="${{.store}}">
         <input type="hidden" name="type" value="${{.type}}"> 
@@ -30,7 +31,7 @@
         <input class="dl_txt" type="submit" name="submit" value="清單"></input>
       </form>
     </div>
-  
+    <input type="hidden" name="order_id" value="${{.order_id}}">
         <input type="hidden" name="id" value="${{.id}}">
         <input type="hidden" name="store" value="${{.store}}">
         <input type="hidden" name="type" value="${{.type}}"> 
