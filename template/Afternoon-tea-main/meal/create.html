@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>下午茶系統</title>
+    <link rel="stylesheet" href="/meal/create.css">
+    <link href="../api/icon.css"
+    rel="stylesheet">
+</head>
+
+<body>
+    <div class="toolbar" id="homePage">
+        <i class="material-icons">home</i>
+        <div class="mem_txt">首頁</div>
+    </div>
+
+    <div class="box">
+        <div class="subbox left">
+            <form class="choose">
+                <div class="input_box picture">
+                    <input type="hidden" name="imagestring" value = "${{.image}}">
+                    <input accept="image/*" id="previewImage" type="file" value = "${{.image}}">
+                </div>
+                <hr>
+
+                <div class="input_box">
+                    <div class="input_txt date">日期 ：</div>
+                    <input class="input_" type="date" name="date" id="input_date" value = "${{.date}}"></input>
+                </div>
+
+                <div class="input_box">
+                    <div class="input_txt shop">店名 ：</div>
+                    <input class="input_" name="store" id="input_store" value = "${{.store}}"></input>
+                </div>
+
+                <div class="input_box">
+                    <div class="input_txt date">類型 ：</div>
+                    <select class="input_ type" name="type" id="input_type" value = "${{.type}}">
+                        <option>食物</option>
+                        <option>飲料</option>
+                    </select>
+                </div>
+
+                <div class="input_box">
+                    <div class="input_txt shop">備註 ：</div>
+                    <input class="input_" name="memo" id="input_memo" placeholder="善化店09XXXXXXXX" value = "${{.memo}}"></input>
+                </div>
+
+                <!-- -------------------------------------------------------- -->
+                <!-- <div class="input_box">
+                    <input type="submit" name="submit" id="submit" value="送出"/>
+                </div> -->
+                <div class="input_box">
+                    <!-- <input type="submit" name="submit" id="submit" /> -->
+                    <div class="subBtn" id="submit1"> 儲存 </div>
+                    <div class="subBtn" id="submit2"> 開單 </div>
+                </div>
+                
+                <!-- -------------------------------------------------------- -->
+                
+                <br />
+
+            </form>
+        </div>
+        <div class="subbox right">
+            <img id="show_image" src="${{.image}}">
+        </div>
+
+
+    </div>
+    <!-- partial -->
+    <script src='/api/jquery.min.js'></script>
+    <script src='/api/vue.min.js'></script>
+    <script src="/meal/create.js"></script>
+</body>
+
+</html>

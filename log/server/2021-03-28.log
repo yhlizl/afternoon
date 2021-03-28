@@ -1,0 +1,98 @@
+2021-03-28 10:42:18.081 [DEBU] SetServerRoot path: /Users/royale/go/src/test/afternoon/template/Afternoon-tea-main
+2021-03-28 10:42:18.082 [DEBU] SetServerRoot path: /Users/royale/go/src/test/afternoon/public
+2021-03-28 10:42:18.083 79819: http server started listening on [:8080]
+
+  SERVER  | DOMAIN  | ADDRESS | METHOD |          ROUTE          |                    HANDLER                    |             MIDDLEWARE              
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | GET    | /                       | afternoon/app/api.Index                       |                                     
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /checkmember            | afternoon/app/api.Checkmember                 |                                     
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /control/close          | afternoon/app/api.(*controlApi).Close         | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /detail                 | afternoon/app/api.(*detailApi).Index          | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /detail/deleter         | afternoon/app/api.(*detailApi).Deleter        | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /detail/getinit         | afternoon/app/api.(*detailApi).Getinit        | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /detail/index           | afternoon/app/api.(*detailApi).Index          | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /detail/register        | afternoon/app/api.(*detailApi).Register       | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /export                 | afternoon/app/api.(*exportApi).Index          | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /export/index           | afternoon/app/api.(*exportApi).Index          | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | GET    | /logout                 | afternoon/app/api.Logout                      |                                     
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /meal                   | afternoon/app/api.(*mealApi).Index            | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /meal/create            | afternoon/app/api.(*mealApi).Create           | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /meal/getmeal           | afternoon/app/api.(*mealApi).Getmeal          | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /meal/index             | afternoon/app/api.(*mealApi).Index            | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /member/deleter         | afternoon/app/api.(*memberApi).Deleter        | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /member/getinit         | afternoon/app/api.(*memberApi).Getinit        | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /member/middleware-auth | afternoon/app/api.(*memberApi).MiddlewareAuth | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /member/register        | afternoon/app/api.(*memberApi).Register       | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | GET    | /member/show            | afternoon/app/api.(*memberApi).Show-fm        | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /member/show            | afternoon/app/api.(*memberApi).Show           | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+
+2021-03-28 10:53:21.743 [DEBU] SetServerRoot path: /Users/royale/go/src/test/afternoon/template/Afternoon-tea-main
+2021-03-28 10:53:21.744 [DEBU] SetServerRoot path: /Users/royale/go/src/test/afternoon/public
+2021-03-28 10:53:21.745 84708: http server started listening on [:8080]
+
+  SERVER  | DOMAIN  | ADDRESS | METHOD |          ROUTE          |                    HANDLER                    |             MIDDLEWARE              
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | GET    | /                       | afternoon/app/api.Index                       |                                     
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /checkmember            | afternoon/app/api.Checkmember                 |                                     
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /control/close          | afternoon/app/api.(*controlApi).Close         | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /detail                 | afternoon/app/api.(*detailApi).Index          | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /detail/deleter         | afternoon/app/api.(*detailApi).Deleter        | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /detail/getinit         | afternoon/app/api.(*detailApi).Getinit        | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /detail/index           | afternoon/app/api.(*detailApi).Index          | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /detail/register        | afternoon/app/api.(*detailApi).Register       | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /export                 | afternoon/app/api.(*exportApi).Index          | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /export/index           | afternoon/app/api.(*exportApi).Index          | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | GET    | /logout                 | afternoon/app/api.Logout                      |                                     
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /meal                   | afternoon/app/api.(*mealApi).Index            | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /meal/create            | afternoon/app/api.(*mealApi).Create           | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /meal/getmeal           | afternoon/app/api.(*mealApi).Getmeal          | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | ALL    | /meal/index             | afternoon/app/api.(*mealApi).Index            | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /member/deleter         | afternoon/app/api.(*memberApi).Deleter        | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /member/getinit         | afternoon/app/api.(*memberApi).Getinit        | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /member/middleware-auth | afternoon/app/api.(*memberApi).MiddlewareAuth | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /member/register        | afternoon/app/api.(*memberApi).Register       | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | GET    | /member/show            | afternoon/app/api.(*memberApi).Show-fm        | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+  default | default | :8080   | POST   | /member/show            | afternoon/app/api.(*memberApi).Show           | api.(*memberApi).MiddlewareAuth-fm  
+|---------|---------|---------|--------|-------------------------|-----------------------------------------------|------------------------------------|
+

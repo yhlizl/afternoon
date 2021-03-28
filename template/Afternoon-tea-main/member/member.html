@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>下午茶系統</title>
+  <link rel="stylesheet" href="./member.css">
+  <link href="../api/icon.css"
+  rel="stylesheet">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="toolbar" id="homePage">
+    <i class="material-icons">home</i>
+    <div class="mem_txt">首頁</div>
+</div>
+
+<div class="box">
+  <div class="add">
+    <!-- <div class="sub"></div> -->
+    <div>姓名 :</div>
+    <div class="blank_10"></div>
+    <input class="input_num" id="input_name"> </input>
+    <div class="blank_20"></div>
+    <div>部門 :</div>
+    <div class="blank_10"></div>
+    <select id="input_dep">
+        <option>F18-MITD</option>
+        <option>F14-MITD</option>
+    </select>
+    <div class="blank_20"></div>
+    <div>工號 :</div>
+    <div class="blank_10"></div>
+    <input class="input_num" id="input_num"> </input>
+    <div class="blank_20"></div>
+    <div class="btn_send">新增</div>
+    <img class="tail" src="../tail01.png"/>
+    <img class="image" src="../cat.png"/>
+</div>
+  <div class="list" id="list">
+    <div class="member_list" v-for="r in rows">
+        <div class="item">${r.name}</div>
+        <div class="item em">${r.dep}</div>
+        <div class="item em">${r.number}</div>
+        <div><i class="item em material-icons deleteBtn" v-on:click="deleted(r,$event)">delete</i></div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- partial -->
+  <script src='../api/jquery.min.js'></script>
+<script src='../api/vue.min.js'></script>
+<script src="./member.js"></script>
+</body>
+</html>

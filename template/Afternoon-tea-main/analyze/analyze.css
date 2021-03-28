@@ -1,0 +1,271 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+:root{
+    --orange: #e8a32c;
+    --bgc: #eff3fc;
+    --black: #717171;
+    --blue: #99A6CB;
+}
+
+body, html{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--bgc);
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+}
+  
+  .box{
+    width: 640px;
+    height: 400px;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    /* border: solid 1px; */
+    border-radius: 50px;
+    /* box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5); */
+    /* background-color: #3b648d; */
+    
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .subbox{
+    /* border: solid black; */
+    height: 95%;
+  }
+
+  .pie_box{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pie{
+    width: 80%;
+    height: 80%;
+  }
+
+  .g{
+    width: 150px;
+  }
+  .list_box{
+    width: 45%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: solid black; */
+    
+  }
+  
+  .list{
+    width: 60%;
+    /* border: solid black; */
+    background-color: #fff;
+    height: 25px;
+    border-radius: 3px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+ 
+  .text{
+    /* border: solid red; */
+    font-size: 16px;
+  }
+
+
+  .add{
+    width: 540px;
+    height: 60px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    /* border: solid 1px; */
+    color: var(--black);
+    position: relative;
+    left: 50%;
+    right: 50%;
+    top: 80px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    box-shadow: 0px 3px 3px 3px rgba(211, 217, 232,0.7);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  /* .sub{
+    width: 100%;
+    border: solid #333;
+    position: absolute;
+    top: 0px;
+    height: 30px;
+    background-color: #99A6CB;
+  } */
+
+  .title{
+    font-size: 30px;
+    font-weight: 800;
+    color: #b99362;
+    margin-bottom: 30px;
+  }
+  
+  .in{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #input_store{
+    width: 120px;
+  }
+  .input_dep{
+    font-size: 12px;
+
+  }
+  .input_num{
+    width: 60px;
+    padding-left: 5px;
+  }
+  
+  .blank_10{
+    width: 10px;
+  }
+  .blank_20{
+    width: 20px;
+  }
+
+  
+  .em{
+      text-align: center;
+  }
+
+  .btn_send{
+    width: 60px;
+    height: 24px;
+    color: white;
+    box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.2);
+
+    background-color: var(--orange);
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+    cursor: pointer;
+  }
+
+  .toolbar{
+    width: 80px;
+    height: 50px;
+    /* border: solid var(--blue); */
+    background-color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: -25px;
+    right: 50px;
+    text-align: center;
+    box-shadow: 0px 3px 3px 3px rgba(211, 217, 232,0.7);
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.toolbar:hover{
+    top: -15px;
+    /* border-radius: 0px; */
+}
+.material-icons{
+    position: relative;
+    margin-top: 25px;
+    color: var(--black);
+    transition-duration: 0.5s;
+    
+}
+.icon{
+  margin-top: -3px;
+  margin-right: 10px;
+  color: var(--black);
+  width: 20px;
+  height: 20px;
+  
+}
+.mem_txt{
+    position: relative;
+    margin-top: -30px;
+    color: var(--black);
+    opacity: 0;
+    transition-duration: 0.8s;
+}
+.toolbar:hover .material-icons{
+    opacity: 0;
+    
+}
+.toolbar:hover .mem_txt{
+    opacity: 1;
+    
+}
+
+.image{
+    width: 90px;
+    position: absolute;
+    transform: rotate(15deg);
+    top: -40px;
+    right: 0px;
+  }
+  
+.tail{
+    position: absolute;
+    /* border: solid red; */
+    width: 25px;
+    top: -30px;
+    right: -15px;
+    transform: rotate(60deg);
+    transform: scaleY(1);
+    animation-name: tail;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-start;
+  }
+  
+  @keyframes tail {
+    0% {
+      top: -30px;
+    }
+    50% {
+      top: -25px;
+      transform: rotate(65deg);
+    }
+    100% {
+      top: -30px;
+    }
+  }
+
+  @keyframes show {
+    100% {
+      opacity: 1;
+    }
+  }

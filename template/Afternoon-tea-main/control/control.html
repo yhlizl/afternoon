@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fang</title>
+    
+    <link rel="stylesheet" href="../api/c3.css">
+    <!-- <link rel="stylesheet" href="../api/c3.min.css" type="text/css"> -->
+    <link href="../api/poppins-font.css" rel="stylesheet">
+    <link href="../api/icon.css" rel="stylesheet">
+    <link href="../api/jquery.dataTables.css" rel="stylesheet">
+    <link rel="stylesheet" href="./control.css">
+    
+</head>
+<body>
+    <div class="toolbar" id="homePage">
+        <i class="material-icons home">home</i>
+        <div class="mem_txt">首頁</div>
+    </div>
+
+    <div class="box" id="box">
+        <H1 class="cardTitle" id="cardTitle" >今日菜單管理</H1>
+ 
+        <div class="subject" >
+            <div class="completedTableBox" style="margin-bottom: 30px;">
+                <table id="completedTable" class="display" data-page-length='1'>
+                    <thead>
+                        <tr>
+                            <!-- <th></th> -->
+                            <th>店家</th>
+                            <th>類型</th>
+                            <th>備註</th>
+                            <th>日期</th>
+                            <th>管理</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="r in today_meal"> 
+                            
+                            <td>${r.store}</td>
+                            <td>${r.type}</td>
+                            <td>${r.memo}</td>
+                            <td>${r.date}</td>
+                            
+                            <td><i class="material-icons deleteBtn" v-on:click="deleted(r,$event)">delete</i></td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="footer"></div>
+    <!-- partial -->
+    <!-- <script src='../api/jquery.min.js'></script> -->
+    <script src='../api/jquery-3.5.1.js'></script>
+    <script src='../api/c3.min.js'></script>
+    <script src='../api/d3.min.js'></script>
+    <script src='../api/vue.min.js'></script>
+    <script src='../api/jquery.dataTables.min.js'></script>
+    <script src='../api/dataTables.buttons.min.js'></script>
+    <script src='../api/dataTables.select.min.js'></script>
+    <script src='../api/dataTables.editor.min.js'></script>
+    <!-- <script type="text/javascript" src="../Editor-1.9.6/js/dataTables.editor.js"></script> -->
+    <script src='./control.js'></script>
+</body>
+
+</html>

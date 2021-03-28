@@ -1,0 +1,29 @@
+# HTTP Server
+[server]
+	Address     = ":8080"
+	ServerRoot  = "public"
+	ServerAgent = "gf-app"
+	LogPath     = "log/server"
+
+# Logger.
+[logger]
+    Path        = "./log/gf-app"
+    Level       = "all"
+    Stdout      = true
+
+# Template.
+[viewer]
+    Path        = "./template/Afternoon-tea-main/"
+    DefaultFile = "index.html"
+    Delimiters  =  ["${{", "}}"]
+
+# Database.
+[database]
+    [[database.MITD]]
+    link  = "mysql:root:hans5943@tcp(127.0.0.1:3306)/MITD_DB"
+    debug = true
+    # Database logger.
+    [database.logger]
+        Path   = "log/sql"
+        Level  = "all"
+        Stdout = true
