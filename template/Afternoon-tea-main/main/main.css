@@ -66,6 +66,10 @@ body, html{
 .logout{
     right: 230px;
 }
+.user{
+    right: 500px;
+}
+
 
 .box{
     width: 80%;

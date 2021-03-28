@@ -92,9 +92,12 @@ func Index(r *ghttp.Request) {
 	data := r.Session.Map()["name"]
 	if data != nil && data != "" {
 
-		r.Response.WriteTpl("main/main.html")
+		r.Response.WriteTpl("main/main.html",
+			g.Map{
+				"user": data,
+			})
 	} else {
-		r.Response.WriteTpl("index.html", g.Map{"name": data})
+		r.Response.WriteTpl("index.html", g.Map{"user": data})
 	}
 }
 
