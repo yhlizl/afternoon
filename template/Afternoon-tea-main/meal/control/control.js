@@ -32,6 +32,7 @@ var vm = new Vue({
                 let data = {
                     id: r.id,
                     store: r.store,
+                    date:r.date,
                 };
                 function successFunc(result) {
                     get_order();
