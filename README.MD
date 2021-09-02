@@ -1,4 +1,4 @@
-# GoFrame Project
+# 下午茶訂單系統 MVC (GOFRAME/PHP two version)
 下午茶訂單系統 MVC 
 <br>Demo
 <br>METHOD
