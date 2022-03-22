@@ -3,7 +3,7 @@
 <br>Demo
 <br>METHOD
 <br>1.git clone github.com/yhlizl/afternoon/
-<br>2.g run main.go
+<br>2.go run main.go
 <br>
 plz modify afternoon/config/config.toml 
 <br>
